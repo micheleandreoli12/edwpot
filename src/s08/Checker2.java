@@ -1,6 +1,9 @@
 package s08;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.time.LocalTime;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -11,8 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/s08/checker")
-public class Checker extends HttpServlet {
+@WebServlet("/s08/checker2")
+public class Checker2 extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -26,9 +29,22 @@ public class Checker extends HttpServlet {
             }
         }
         request.setAttribute("set", set);//dal developer ATTRIBUTI
+        String s = "";
 
-        RequestDispatcher rd = request.getRequestDispatcher("/s08/checker.jsp");
-        rd.forward(request, response);
+        if (set == null || set.isEmpty()) {
+            s = ("is empty");
+        } else {
+            s = ("contains these letters:");
+
+            Iterator<Character> it = set.iterator();
+            while (it.hasNext()) {
+                s=(s + " " + it.next());
+            }
+           
+        }
+        try (PrintWriter writer = response.getWriter()) {
+            writer.println(s);
+        }
     }
 
     @Override

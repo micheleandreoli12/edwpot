@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FORM &amp; request</title>
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<h1>Hello!</h1>
+	<form action="/edwpot/s08/checker" method="get">
+		<div>
+			<label for="usr">Username: </label> <input type="text" name="user"
+				placeholder="Put your name here" required />
+		</div>
+
+	</form>
+	<script type="text/javascript">
+		$(function() {
+			 $('#btnPlain').click(function() {
+		            $.ajax({
+		                url : "edwpot/src/s08/checker2/?user=Bob";
+		                success : function(data) {
+		                    $('#targetPlain').text(data);
+		                }
+		            })
+		        })
+	</script>
+
+<div>
+       <textarea rows="4" cols="20" id=UN></textarea>
+        <button id="btnPlain">Send</button>
+        <span id="targetPlain"></span>
+    </div>
+
+</body>
+</html>
