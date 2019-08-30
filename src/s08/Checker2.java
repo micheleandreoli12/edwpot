@@ -42,6 +42,8 @@ public class Checker2 extends HttpServlet {
             }
            
         }
+        response.setContentType("text/plain");
+        response.setCharacterEncoding("utf-8");
         try (PrintWriter writer = response.getWriter()) {
             writer.println(s);
         }

@@ -17,20 +17,20 @@
 	<script type="text/javascript">
 		$(function() {
 			 $('#btnPlain').click(function() {
-		            $.ajax({
-		                url : "edwpot/src/s08/checker2/?user=Bob";
-		                success : function(data) {
+		            $.ajax({     /* url risorsa da usare    */    
+                        url : "edwpot/src/s08/checker2?user=Bob";//componenti oggetto che passo ad ajax; ogni componente chiave valore
+		                success : function(data) {  //azione in caso di successo; data oggetto response
 		                    $('#targetPlain').text(data);
 		                }
 		            })
 		        })
 	</script>
 
-<div>
-       <textarea rows="4" cols="20" id=UN></textarea>
-        <button id="btnPlain">Send</button>
-        <span id="targetPlain"></span>
-    </div>
+	<div>
+		<textarea rows="4" cols="20" id=UN></textarea>
+		<button id="btnPlain">Send</button>
+		<span id="targetPlain"></span>
+	</div>
 
 </body>
 </html>
