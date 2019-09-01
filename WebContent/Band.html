@@ -14,9 +14,9 @@
 	
 	<script type="text/javascript">
 		$(function() {
-			 $('#Chart').click(function() {
+			 $('#Cart').click(function() {
 		            $.ajax({     /* url risorsa da usare    */    
-                        url : "edwpot/src/Band?name01=1,name02=2,name03=3,name04=4,name05=5";//componenti oggetto che passo ad ajax; ogni componente chiave valore
+                        url : "/edwpot/ex/Band?name01=1&name02=3&name03=5";//componenti oggetto che passo ad ajax; ogni componente chiave valore
 		                success : function(data) {  //azione in caso di successo; data oggetto response
 		                    $('#target').text(data);
 		                }
@@ -59,7 +59,7 @@
 
 		<div>
 			<!-- compare it against the button element -->
-			<input type="button" value="Send to chart" id="Chart"/>
+			<input type="button" value="Send to cart" id="Cart"/>
 		</div>
 
 		<input type="button" value="Checkout">
