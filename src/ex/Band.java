@@ -45,26 +45,46 @@ public class Band extends HttpServlet {
 	            }
 	        } else {
 	        	
-	        	double vprev1= (double) session.getAttribute("01");
+	        	int vprev1= (int) session.getAttribute("01");
+	        	if (request.getParameter("name01") != null) {
 	        	int vact1 = Integer.parseInt(request.getParameter("name01"));
 	        	session.setAttribute("01", vprev1+ vact1 );
+	        	}
+	        	else {
+	        		session.setAttribute("01", vprev1+ 0 );
+	        	}
 	        	
-	        	double vprev2= (double) session.getAttribute("02");
+	        	int vprev2= (int) session.getAttribute("02");
+	        	if (request.getParameter("name02") != null) {
 	        	int vact2 = Integer.parseInt(request.getParameter("name02"));
 	        	session.setAttribute("02", vprev2+ vact2 );
+	        	} else {	        		
+	        		session.setAttribute("02", vprev2+ 0 );
+	        	}
 	        	
-	        	double vprev3= (double) session.getAttribute("03");
+	        	int vprev3= (int) session.getAttribute("03");
+	        	if (request.getParameter("name03") != null) {
 	        	int vact3 = Integer.parseInt(request.getParameter("name03"));
 	        	session.setAttribute("03", vprev3+ vact3 );
+	        	} else {	        		
+	        		session.setAttribute("03", vprev3+ 0 );
+	        	}
 	        	
-	        	double vprev4= (double) session.getAttribute("04");
+	        	int vprev4= (int) session.getAttribute("04");
+	        	if (request.getParameter("name04") != null) {
 	        	int vact4 = Integer.parseInt(request.getParameter("name04"));
 	        	session.setAttribute("04", vprev4+ vact4 );
+	        	} else {	        		
+	        		session.setAttribute("04", vprev4+ 0 );
+	        	}
 	        	
-	        	double vprev5= (double) session.getAttribute("05");
+	        	int vprev5= (int) session.getAttribute("05");
+	        	if (request.getParameter("name05") != null) {
 	        	int vact5 = Integer.parseInt(request.getParameter("name05"));
 	        	session.setAttribute("05", vprev5+ vact5 );
-	        	
+	        	} else {	        		
+	        		session.setAttribute("05", vprev5+ 0 );
+	        	}
 	        }
 		// TODO Auto-generated method stub
 		
