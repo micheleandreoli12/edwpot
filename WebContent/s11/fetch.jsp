@@ -15,10 +15,10 @@
         <span>User is <%=request.getAttribute("user")%></span>
     </div>
     <div>
-        <%
+    <%--     <%
             User usr = (User) request.getAttribute("user");
         %>
-        User is <span><%=usr.getName()%>, <%=usr.getId()%></span>
+        User is <span><%=usr.getName()%>, <%=usr.getId()%></span> --%>
     </div>
 
     <!-- JavaBean accessed through standard action -->

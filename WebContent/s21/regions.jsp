@@ -10,7 +10,8 @@
 <title>HR Regions</title>
 </head>
 <body>
-    <table>
+<div class="container-fluid">
+    <table class="table table-hover">
         <tr>
             <th>id</th>
             <th>name</th>
@@ -22,5 +23,6 @@
             </tr>
         </c:forEach>
     </table>
+    </div>
 </body>
 </html>
